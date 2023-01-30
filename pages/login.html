@@ -1,31 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pr_BR"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <meta nome="description" content="descrição que fica em baixo do título na pesquisa">
+    <title>Game Mania</title>
 
-    <link rel="stylesheet" href="../css/login.css">
+    <!-- css -->
+    <link rel="stylesheet" href="../assets/css/login.css">
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">  
 </head>
 <body>
     <div class="main-login">
-        <a class="voltar" href="../index.html"><img src="../img/arrow-left-solid.svg" alt=""></a>
+        <div class="title">
+            <h1>Login</h1>
+            <a class="back" href="../index.html">
+                <i class="fa-solid fa-xmark"></i>
+            </a>    
+        </div>
         <div class="login">
-                <h1>Login</h1>
-                    <div class="dados">
-                        <label for="usuario">Usuário</label>
-                        <input type="text" name="usuario">
-                    </div>
-                    <div class="dados ">
-                        <label for="senha">Senha</label>
-                        <input type="password" name="senha">
-                    </div>
-                <button class="btn-login">Login</button>
-                <div>
-                    <a href="">Esqueceu a senha?</a>
-                    <a href="cadastrar.html">Cadastrar</a>
+            <form class="data">
+                <div class="user-data">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" name="usuario">
                 </div>
+                <div class="user-data">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha">
+                </div>
+                <a class="forget" href="">Esqueceu a senha?</a>
+            </form>
+
+            <button class="btn-login">Login</button>
+
+            <a class="getin" href="cadastrar.html">Cadastrar</a>
         </div>
     </div>
+
+    <script src="https://kit.fontawesome.com/ea393de4c9.js" crossorigin="anonymous"></script>
 </body>
 </html>

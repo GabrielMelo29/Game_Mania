@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    font-family: 'Poppins', sans-serif;
+    background: var(--body-color);
+}
+
+.main-login {
+    background: var(--header);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+    max-width: 600px;
+
+    border-radius: .3rem;
+    padding: 3rem 2rem;
+}
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 0;
+    border-bottom: 2px solid var(--fill);
+}
+.title h1 {
+    font-size: 25px;
+    text-decoration: underline;
+    color: var(--red-color);
+    text-decoration: none;
+}
+.back {
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.user-data label {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--fill);
+}
+.user-data input {
+    color: var(--text-color);
+    font-size: 17px;
+    padding: .7rem .4rem .3rem .4rem;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid var(--fill);
+    background: none;
+    outline: none;
+
+    transition: .4s;
+}
+.user-data input:hover {
+    border-bottom: 2px solid var(--text-color);
+}
+
+.data-login {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.btn-login {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+
+    padding: .8rem .6rem;
+    border-radius: .2rem;
+    border: none;
+
+    background-color: var(--red-color);
+    color: var(--bar-color);
+    transition: .3s;
+}
+.btn-login:hover {
+    background-color: var(--body-color);
+}
+.back-login {
+    align-self: center;
+    font-size: 15px;
+}
+
+
+:root{
+    --text-color: #ffffff;
+    --body-color: #303030;
+    --header: #04346B;
+    --fill: #9b9b9b;  
+    --text-color-dark: #2b2b2b;
+    --bar-color: #e6e6e6;
+    --red-color: #f12e2ede;
+
+}
+
+
+/* -- larger than 1024px -- */
+@media (min-width: 1024px) {
+    .main-login {
+        max-width: 800px;
+    }
+
+    .data {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 1.5rem;
+    }
+}

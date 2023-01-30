@@ -3,277 +3,535 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta nome="description" content="descrição que fica em baixo do título na pesquisa"> 
-    <link rel="stylesheet" href="style.css">
-    <title>GameMania</title>
+    <meta nome="description" content="descrição que fica em baixo do título na pesquisa">
+    <title>Game Mania</title>
 
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">  
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"> 
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
 </head>
 
 <body>
+
+    <!-- --------------------------  HEADER -------------------------- -->
     <header>
+        <!-- navigation -->
         <nav class="navigation">
-            <a class="logo" href="#">Game Mania</a>
+            <a class="logo" href="index.html">Game Mania</a>
             <div class="search">
-                <input class="barra" type="text" class="texto" placeholder="O que você procura?">
-                <a href="#"><img src="img/lupa.svg" alt="Lupa"></a>
+                <input class="barra" type="search" class="texto" placeholder="O que você procura?">
+                <button class="btn-search" type="submit">
+                    <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                </button>
             </div>    
-            <ul class="icon">
-                <a href="#"><li class="heart"><img src="img/Favorite.svg" alt="Favotiros"></li></a>
-                <div>
-                    <a href="#"><li class="car">
-                        <img src="img/Shopping_Cart_01.svg" alt="Carrinho">
-                      <p>Produtos <span class="n"> 1</span></p>
-                    </li></a>
-                </div>
-                <li class="menu-login">
-                    <div>
-                        <a class="btn1 btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img src="img/icn-07.png" alt=""> Entrar/ <br>Cadastrar
-                        </a>
-                        <ul class="dropdown-login" aria-labelledby="dropdownMenuLink">
-                            <div>
-                                <li><a href="pages/login.html">Entrar</a></li>
-                                <li><a href="pages/cadastrar.html">Cadastrar</a></li>
-                            </div>
-                        </ul>
-                    </div>
+            <div class="user-actions-desktop">
+                <button class="btn-action">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>2</span>
+                </button>
+                <button class="btn-action">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span> 1</span>
+                </button>
+                <a href="pages/login.html" class="btn-action">
+                    <i class="fa-solid fa-user user"></i>
+                </a>
+            </div>    
+        </nav>
+
+        <!-- desktop-category-menu -->
+        <div class="desktop-category-menu">
+            <ul class="desktop-category-list">
+                <li class="category-menu"><a href="#">Hardware</a></li>
+               <li class="category-menu"><a href="#">Periférico</a></li>
+               <li class="category-menu"><a href="#">Notebook</a></li>
+               <li class="category-menu"><a href="#">PC Gamer</a></li>
+               <li class="category-menu"><a href="#">Tablet</a></li>
+                <li class="category-menu"><a href="#">Console</a></li>
+               <li class="category-menu"><a href="#">Jogo</a></li>
+               <li class="category-menu"><a href="#">Celular</a></li>
+            </ul>    
+        </div>
+
+        <!-- bottom-mobile -->
+        <nav class="bottom-mobile">
+            <button class="btn-action" data-mobile-abrir-menu>
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <button class="btn-action">
+                <i class="fa-solid fa-heart"></i>
+                <span>0</span>
+            </button>
+            <button class="btn-action">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span> 1</span>
+            </button>
+            <a href="pages/login.html" class="btn-action">
+                <i class="fa-solid fa-user user"></i>
+            </a>
+        </nav>
+
+        <!-- menu-mobile scrollbar -->
+        <div class="menu-mobile scrollbar" data-mobile-menu>
+            <div class="menu-top">
+                <h2 class="menu-tittle">Menu</h2>
+                <button class="btn-fechar-menu" data-mobile-fechar-menu>
+                    <i class="fa-regular fa-x"></i>
+                </button>
+            </div>
+            <ul class="mobile-category-list">
+                <li><a href="#">Hardware</a></li>
+                <li><a href="#">Periféricos</a></li>
+                <li><a href="#">Notebooks</a></li>
+                <li><a href="#">PC Gamer</a></li>
+                <li><a href="#">Celular</a></li>
+                <li><a href="#">Tablet</a></li>
+                <li><a href="#">Consoles</a></li>
+                <li><a href="#">Jogos</a></li>
+                <li><a href="#">Cadeiras Gamer</a></li>
+            </ul>
+            <ul class="mobile-menu-social">
+                <li>
+                    <a href="#" class="link-social">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="link-social">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="link-social">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="link-social">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
                 </li>
             </ul>
-        </nav>
-        <div id="menu-categorias" class="menu-categorias">
-            <div>
-                <a class="btn2 btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Todas as categorias &#8744
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <li><a href="#">Hardware</a></li>
-                    <li><a href="#">Periféricos</a></li>
-                    <li><a href="#">Notebooks</a></li>
-                    <li><a href="#">PC Gamer</a></li>
-                    <li><a href="#">Celular</a></li>
-                    <li><a href="#">Consoles</a></li>
-                    <li><a href="#">Jogos</a></li>
-                    <li><a href="#">Cadeiras Gamer</a></li>
-                </ul>
-            </div>
-            <ul class="lista-categoria">
-               <a href="#"><li class="lista">PC Gamer</li></a>
-               <a href="#"><li class="lista">Hardware</li></a>  
-               <a href="#"><li class="lista">Notebook</li></a>
-               <a href="#"><li class="lista">Periféricos</li></a>
-               <a href="#"><li class="lista">Celular</li></a>     
-           </ul>
         </div>
-        
     </header>
-    <div class="banner">
-        <img src="img/Group 16.png" alt="">
-    </div>
 
-    <section class="secao-promocao">
-        <div class="titulo-promocao">
-            <h1>Promoção</h1>
-            <div class="tudo">
-                <h2>Ver tudo</h2>
-                <a href="#"><img src="img/Arrow.png" alt="Ver todos os produtos"></a>
-            </div>
-        </div>
-        <div class="slide">
-            <div>
-                <button class="botao" onclick="scrollr()"><img src="img/wave_arrow left.png" alt=""></button>
-            </div>
-            <div class="produtos-promocao">
-                <div class="promocao">
-                    <div class="produto"><a href="#"><img src="img/notebook.jpg" alt="Notebook"></a>
-                        <h3>%</h3></div>
-                    <div class="produto"><a href="#"><img src="img/gabinete.jpg" alt="Gabinete"></a>
-                        <h3>%</h3></div>
-                    <div class="produto"><a href="#"><img src="img/mouse.jpg" alt="Mouse"></a>
-                        <h3>%</h3></div>
-                    <div class="produto"><a href="#"><img src="img/controle.jpg" alt="Controle"></a>
-                        <h3>%</h3></div>
-                    <div class="produto"><a href="#"><img src="img/earphones-5193970_1920.jpg" alt="Earphones"></a>
-                        <h3>%</h3></div>
+    <!-- --------------------------  MAIN -------------------------- -->
+    <main>
+        <!-- banner -->
+        <section class="banner">
+            <img src="assets/img/Rectangle 6.png" alt="">
+            <div class="banner-content">
+                    <h2 class="title-banner">Ofertas para você subir de nível</h2>
+                    <a href="#" class="btn-banner">Veja aqui</a>
                 </div>
-            </div>
-            <div>
-                <button class="botao botaor" onclick="scrolll()"><img src="img/wave_arrow right.png" alt=""></button>
-            </div>    
-        </div>
         </section>
 
-    <section class="secao-destaques">
-        <h1>Destaque</h1>
-        <div class="destaques">            
-            <div class="produtos-destaque">
-                <a href="#"><img src="img/Rectangle 16.png" alt=""></a>
-                <p class="detalhe">estrelas</p>
-                <p class="descricao detalhe">Loren ipsun dolor sit anet, consectetur adipisci elit, sed eiusnod tenpor incidunt ut labore et dolore nagna aliqua</p>
-                <div>
-                    <h4 class="detalhe">R$ Valor</h4>
-                    <h5 class="detalhe">À vista</h5>
+        <!-- promotion -->
+        <section class="promotion-section">
+            <div class="title-promotion">
+                <h2>Promoção</h2>
+                <div class="all-promotion">
+                    <h2>Ver tudo</h2>
+                    <a href="#">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
-                <h6 class="detalhe">R$ Valor</h6>
             </div>
-            <div class="produtos-destaque">
-                <a href="#"><img src="img/Rectangle 18.png" alt=""></a>
-                <p class="detalhe">estrelas</p>
-                <p class="descricao detalhe">Loren ipsun dolor sit anet, consectetur adipisci elit, sed eiusnod tenpor incidunt ut labore et dolore nagna aliqua</p>
-                <div>
-                    <h4 class="detalhe">R$ Valor</h4>
-                    <h5 class="detalhe">À vista</h5>
+            <div class="promotion-slide scrollbar">
+                <div class="product-promotion">
+                    <a href="#">
+                        <img src="assets/img/notebook.jpg" alt="Notebook">
+                    </a>
+                    <span>25%</span>
                 </div>
-                <h6 class="detalhe">R$ Valor</h6>
-            </div>
-            <div class="produtos-destaque">
-                <a href="#"><img src="img/Rectangle 19.png" alt=""></a>
-                <p class="detalhe">estrelas</p>
-                <p class="descricao detalhe">Loren ipsun dolor sit anet, consectetur adipisci elit, sed eiusnod tenpor incidunt ut labore et dolore nagna aliqua</p>
-                <div>
-                    <h4 class="detalhe">R$ Valor</h4>
-                    <h5 class="detalhe">À vista</h5>
+                <div class="product-promotion">
+                    <a href="#">
+                        <img src="assets/img/gabinete.jpg" alt="Gabinete">
+                    </a>
+                    <span>%</span>
                 </div>
-                <h6 class="detalhe">R$ Valor</h6>
-            </div>
-            <div class="produtos-destaque">
-                <a href="#"><img src="img/Rectangle 20.png" alt=""></a>
-                <p class="detalhe">estrelas</p>
-                <p class="descricao detalhe">Loren ipsun dolor sit anet, consectetur adipisci elit, sed eiusnod tenpor incidunt ut labore et dolore nagna aliqua</p>
-                <div>
-                    <h4 class="detalhe">R$ Valor</h4>
-                    <h5 class="detalhe">À vista</h5>
+                <div class="product-promotion">
+                    <a href="#">
+                        <img src="assets/img/mouse.jpg" alt="Mouse">
+                    </a>
+                    <span>%</span>
                 </div>
-                <h6 class="detalhe">R$ Valor</h6>
-            </div>
-            <div class="produtos-destaque">
-                <a href="#"><img src="img/Rectangle 21.png" alt=""></a>
-                <p class="detalhe">estrelas</p>
-                <p class="descricao detalhe">Loren ipsun dolor sit anet, consectetur adipisci elit, sed eiusnod tenpor incidunt ut labore et dolore nagna aliqua</p>
-                <div>
-                    <h4 class="detalhe">R$ Valor</h4>
-                    <h5 class="detalhe">À vista</h5>
+                <div class="product-promotion">
+                    <a href="#">
+                        <img src="assets/img/controle.jpg" alt="Controle">
+                    </a>
+                    <span>%</span>
                 </div>
-                <h6 class="detalhe">R$ Valor</h6>
-            </div>
-            <div class="produtos-destaque">
-                <a href="#"><img src="img/Rectangle 22.png" alt=""></a>
-                <p class="detalhe">estrelas</p>
-                <p class="descricao detalhe">Loren ipsun dolor sit anet, consectetur adipisci elit, sed eiusnod tenpor incidunt ut labore et dolore nagna aliqua</p>
-                <div>
-                    <h4 class="detalhe">R$ Valor</h4>
-                    <h5 class="detalhe">À vista</h5>
+                <div class="product-promotion">
+                    <a href="#">
+                        <img src="assets/img/earphones-5193970_1920.jpg" alt="Earphones">
+                    </a>
+                    <span>%</span>
                 </div>
-                <h6 class="detalhe">R$ Valor</h6>
-            </div>
-            <div class="produtos-destaque">
-                <a href="#"><img src="img/Rectangle 23.png" alt=""></a>
-                <p class="detalhe">estrelas</p>
-                <p class="descricao detalhe">Loren ipsun dolor sit anet, consectetur adipisci elit, sed eiusnod tenpor incidunt ut labore et dolore nagna aliqua</p>
-                <div>
-                    <h4 class="detalhe">R$ Valor</h4>
-                    <h5 class="detalhe">À vista</h5>
+                <div class="product-promotion">
+                    <a href="#">
+                        <img src="assets/img/earphones-5193970_1920.jpg" alt="Earphones">
+                    </a>
+                    <span>%</span>
                 </div>
-                <h6 class="detalhe">R$ Valor</h6>
+                <div class="product-promotion">
+                    <a href="#">
+                        <img src="assets/img/earphones-5193970_1920.jpg" alt="Earphones">
+                    </a>
+                    <span>%</span>
+                </div>   
             </div>
-            <div class="produtos-destaque">
-                <a href="#"><img src="img/Rectangle 24.png" alt=""></a>
-                <p class="detalhe">estrelas</p>
-                <p class="descricao detalhe">Loren ipsun dolor sit anet, consectetur adipisci elit, sed eiusnod tenpor incidunt ut labore et dolore nagna aliqua</p>
-                <div>
-                    <h4 class="detalhe">R$ Valor</h4>
-                    <h5 class="detalhe">À vista</h5>
+        </section>
+
+        <!-- highlight -->
+        <section class="highlight-section">
+            <div class="title-highlight">
+                <h2>Destaque</h2>
+            </div>
+            <div class="product-highlight">            
+                <div class="product">
+                    <a href="#">
+                        <img src="assets/img/Rectangle 16.png" alt="" class="product-img">
+                    </a>
+                    <div class="highlight-action">
+                        <button class="btn-action">
+                            <i class="fa-solid fa-heart"></i>
+                        </button>
+                        <button class="btn-action">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                    <div class="product-description">
+                        <div class="evaluation">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>    
+                        <p class="description">Loren ipsun dolor sit anet, consectetur adipisci elit, sed eiusnod tenpor incidunt ut labore et dolore nagna aliqua</p>
+                        <div class="price-description">
+                            <h4>R$ Valor</h4>
+                            <h5>À vista</h5>
+                        </div>
+                        <h6>R$ Valor</h6>    
+                    </div>
                 </div>
-                <h6 class="detalhe">R$ Valor</h6>
+
+                <div class="product">
+                    <a href="#">
+                        <img src="assets/img/Rectangle 18.png" alt="" class="product-img">
+                    </a>
+                    <div class="highlight-action">
+                        <button class="btn-action">
+                            <i class="fa-solid fa-heart"></i>
+                        </button>
+                        <button class="btn-action">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                    <div class="product-description">
+                        <div class="evaluation">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>    
+                        <p class="description">Loren ipsun dolor sit anet, consectetur adipisci elit, sed eiusnod tenpor incidunt ut labore et dolore nagna aliqua</p>
+                        <div class="price-description">
+                            <h4>R$ Valor</h4>
+                            <h5>À vista</h5>
+                        </div>
+                        <h6>R$ Valor</h6>    
+                    </div>
+                </div>
+
+                <div class="product">
+                    <a href="#">
+                        <img src="assets/img/Rectangle 19.png" alt="" class="product-img">
+                    </a>
+                    <div class="highlight-action">
+                        <button class="btn-action">
+                            <i class="fa-solid fa-heart"></i>
+                        </button>
+                        <button class="btn-action">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                    <div class="product-description">
+                        <div class="evaluation">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>    
+                        <p class="description">Loren ipsun dolor sit anet, consectetur adipisci elit, sed eiusnod tenpor incidunt ut labore et dolore nagna aliqua</p>
+                        <div class="price-description">
+                            <h4>R$ Valor</h4>
+                            <h5>À vista</h5>
+                        </div>
+                        <h6>R$ Valor</h6>    
+                    </div>
+                </div>
+
+                <div class="product">
+                    <a href="#">
+                        <img src="assets/img/Rectangle 20.png" alt="" class="product-img">
+                    </a>
+                    <div class="highlight-action">
+                        <button class="btn-action">
+                            <i class="fa-solid fa-heart"></i>
+                        </button>
+                        <button class="btn-action">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                    <div class="product-description">
+                        <div class="evaluation">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>    
+                        <p class="description">Loren ipsun dolor sit anet, consectetur adipisci elit, sed eiusnod tenpor incidunt ut labore et dolore nagna aliqua</p>
+                        <div class="price-description">
+                            <h4>R$ Valor</h4>
+                            <h5>À vista</h5>
+                        </div>
+                        <h6>R$ Valor</h6>    
+                    </div>
+                </div>
+
+                <div class="product">
+                    <a href="#">
+                        <img src="assets/img/Rectangle 21.png" alt="" class="product-img">
+                    </a>
+                    <div class="highlight-action">
+                        <button class="btn-action">
+                            <i class="fa-solid fa-heart"></i>
+                        </button>
+                        <button class="btn-action">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                    <div class="product-description">
+                        <div class="evaluation">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>    
+                        <p class="description">Loren ipsun dolor sit anet, consectetur adipisci elit, sed eiusnod tenpor incidunt ut labore et dolore nagna aliqua</p>
+                        <div class="price-description">
+                            <h4>R$ Valor</h4>
+                            <h5>À vista</h5>
+                        </div>
+                        <h6>R$ Valor</h6>    
+                    </div>
+                </div>
+
+                <div class="product">
+                    <a href="#">
+                        <img src="assets/img/Rectangle 22.png" alt="" class="product-img">
+                    </a>
+                    <div class="highlight-action">
+                        <button class="btn-action">
+                            <i class="fa-solid fa-heart"></i>
+                        </button>
+                        <button class="btn-action">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                    <div class="product-description">
+                        <div class="evaluation">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>    
+                        <p class="description">Loren ipsun dolor sit anet, consectetur adipisci elit, sed eiusnod tenpor incidunt ut labore et dolore nagna aliqua</p>
+                        <div class="price-description">
+                            <h4>R$ Valor</h4>
+                            <h5>À vista</h5>
+                        </div>
+                        <h6>R$ Valor</h6>    
+                    </div>
+                </div>
+
+                <div class="product">
+                    <a href="#">
+                        <img src="assets/img/Rectangle 23.png" alt="" class="product-img">
+                    </a>
+                    <div class="highlight-action">
+                        <button class="btn-action">
+                            <i class="fa-solid fa-heart"></i>
+                        </button>
+                        <button class="btn-action">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                    <div class="product-description">
+                        <div class="evaluation">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>    
+                        <p class="description">Loren ipsun dolor sit anet, consectetur adipisci elit, sed eiusnod tenpor incidunt ut labore et dolore nagna aliqua</p>
+                        <div class="price-description">
+                            <h4>R$ Valor</h4>
+                            <h5>À vista</h5>
+                        </div>
+                        <h6>R$ Valor</h6>    
+                    </div>
+                </div>
+
+                <div class="product">
+                    <a href="#">
+                        <img src="assets/img/Rectangle 24.png" alt="" class="product-img">
+                    </a>
+                    <div class="highlight-action">
+                        <button class="btn-action">
+                            <i class="fa-solid fa-heart"></i>
+                        </button>
+                        <button class="btn-action">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                    <div class="product-description">
+                        <div class="evaluation">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>    
+                        <p class="description">Loren ipsun dolor sit anet, consectetur adipisci elit, sed eiusnod tenpor incidunt ut labore et dolore nagna aliqua</p>
+                        <div class="price-description">
+                            <h4>R$ Valor</h4>
+                            <h5>À vista</h5>
+                        </div>
+                        <h6>R$ Valor</h6>    
+                    </div>
+                </div>                                        
             </div>
-        </div>
-    </section>
-    <section class="secao-categoria">
-        <div class="categorias">
-            <div class="categoria">
-                <img src="img/pc.png" alt="">
-                <a href="#"><h2>PC GAMER</h2></a>
+        </section>
+
+        <!-- category -->
+        <section class="category-section">
+            <div class="slide-category scrollbar">
+                <div class="category">
+                    <img src="assets/img/pc.png" alt="">
+                    <a href="#">
+                        <span>PC GAMER</span>
+                    </a>
+                </div>
+                <div class="category">
+                    <img src="assets/img/hard.png" alt="">
+                    <a href="#">
+                        <span>CATEGORIA</span>
+                    </a>
+                </div>
+                <div class="category">
+                    <img src="assets/img/cell.png" alt="">
+                    <a href="#">
+                        <span>CATEGORIA</span>
+                    </a>
+                </div>
             </div>
-            <div class="categoria">
-                <img src="img/hard.png" alt="">
-                <a href="#"><h2>CATEGORIA</h2></a>
-            </div>
-            <div class="categoria">
-                <img src="img/cell.png" alt="">
-                <a href="#"><h2>CATEGORIA</h2></a>
-            </div>
-        </div>
-    </section>
-    
+        </section>
+    </main>
+
+    <!-- --------------------------  FOOTER -------------------------- -->
     <footer>
-        <div class="secao-footer">
-            <a class="loja" href="#">
-                <img src="img/home.png" alt="">
+        <div class="footer-section">
+            <!-- store -->
+            <a class="store" href="#">
+                <img src="assets/img/home.png" alt="">
                 <div>
-                    <h2>Loja física em São Paulo</h2>
-                    <h3>Av. nome avenida 2929, bairro</h3>
+                    <h3>Loja física em São Paulo</h3>
+                    <h4>Av. nome avenida 2929, bairro</h4>
                 </div>
-            </a> 
-            <div class="todas-informacoes">
-                <div class="informacoes">
-                    <div class="atendimento info">
-                        <h1>ATENDIMENTO</h1>
-                        <a href="#"><p>Informações</p></a>
-                        <a href="#"><p>Informações</p></a>
-                        <a href="#"><p>Informações</p></a>
+            </a>
+
+            <div class="wrap">
+                <!-- information -->
+                <div class="options">
+                    <div class="info">
+                        <div class="title-information attendance">
+                            <h2>ATENDIMENTO</h2>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="information attendance-info">
+                            <p>Informações</p>
+                            <p>Informações</p>
+                            <p>Informações</p>
+                        </div>
                     </div>
-                    <div class="institucional info">
-                        <h1>INSTITUCIONAL</h1>
-                        <a href="#"><p>Informações</p></a>
-                        <a href="#"><p>Informações</p></a>
-                        <a href="#"><p>Informações</p></a>
+                    <div class="info">
+                        <div class="title-information institutional">
+                            <h2>INSTITUCIONAL</h2>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="information institutional-info">
+                            <p>Informações</p>
+                            <p>Informações</p>
+                            <p>Informações</p>
+                        </div>
                     </div>
-                    <div class="pagamento">
-                        <h1>FORMAS DE PAGAMENTO</h1>
-                        <div>
-                            <img src="img/mastercard.png" alt="">
-                            <img src="img/visa.png" alt="">
-                            <img src="img/boleto.png" alt="">
-                            <img src="img/pix.png" alt="">
+                    <div class="more-information">
+                        <div class="title-information">
+                            <h2>MAIS INFORMAÇÕES</h2>
+                            <i class="fa-solid fa-angle-down"></i>
                         </div>
                     </div>
                 </div>
-                <div class="email">
-                    <p>Receba ofertas exclusivas no seu e-mail</p>
-                    <form action="" class="search">
-                        <input class="barra" type="email" class="texto" placeholder="E-mail">
-                        <button><img src="img/arrow right.png" alt="Lupa"></button>
-                    </form>
-                    <div class="contatos">
-                        <li><a href=""><img src="img/WhatsApp.png" alt="Logo WhatsApp"></a></li>
-                        <li><a href=""><img src="img/Vector 1454 (Stroke).png" alt="Logo Facebook"></a></li>
-                        <li><a href=""><img src="img/Instagram.png" alt="Logo Instagram"></a></li>
-                        <li><a href=""><img src="img/Twitter.png" alt="Logo Twitter"></a></li>
+    
+                <!-- social -->
+                <div class="social">
+                    <div class="contacts">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                    </div>
+                    <div class="email">
+                        <p>Receba ofertas exclusivas no seu e-mail</p>
+                        <form action="" class="search search-email">
+                            <input class="barra" type="email" class="texto" placeholder="E-mail">
+                            <button class="btn-search" type="submit">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
-            <div class="mais">
-                <a href="">MAIS INFORMAÇÕES</a>
+
+            <!-- payment -->
+            <div class="payment">
+                <div class="payment-information">
+                    <i class="fa-brands fa-cc-visa visa"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-solid fa-barcode"></i>
+                    <i class="fa-brands fa-pix"></i>
+                    <i class="fa-brands fa-cc-paypal"></i>
+                </div>
             </div>
         </div>
     </footer>
 
 
-
-    <script>
-        function scrolll() {
-            var left = document.querySelector(".produtos-promocao");
-            left.scrollBy(350, 0);
-        }
-        function scrollr() {
-            var right = document.querySelector(".produtos-promocao");
-            right.scrollBy(-350, 0);
-        }
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ea393de4c9.js" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

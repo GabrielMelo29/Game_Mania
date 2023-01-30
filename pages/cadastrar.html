@@ -1,53 +1,66 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pr_BR"> 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <meta nome="description" content="descrição que fica em baixo do título na pesquisa">
+    <title>Game Mania</title>
 
-    <link rel="stylesheet" href="../css/cadastrar.css">
+    <!-- css -->
+    <link rel="stylesheet" href="../assets/css/cadastrar.css">
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">  
 </head>
 <body>
     <div class="main-login">
-        <a class="voltar" href="../index.html"><img src="../img/arrow-left-solid.svg" alt=""></a>
+        <div class="title">
+            <h1>Criar conta</h1>
+            <a class="back" href="../index.html">
+                <i class="fa-solid fa-xmark"></i>
+            </a>    
+        </div>
         <div class="login">
-                <h1>Criar conta</h1>
-                    <div class="dados">
-                        <div>
-                            <label for="nome">Nome</label>
-                            <input type="text" name="nome">
-                        </div>
-                        <div>
-                            <label for="sobrenome">Sobrenome</label>
-                            <input type="text" name="sobrenome">
-                        </div>
+            <form class="">
+                <div class="data">
+                    <div class="user-data">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome">
                     </div>
-                    <div class="dados">
-                        <div>
-                            <label for="data">Data de nascimento</label>
-                            <input type="date" name="data">
-                        </div>
-                        <div>
-                            <label for="cpf/cnpj">CPF/CNPJ</label>
-                            <input type="password" name="cpf/cnpj">
-                        </div>
+                    <div class="user-data">
+                        <label for="sobrenome">Sobrenome</label>
+                        <input type="text" name="sobrenome">
                     </div>
-                    <div class="dados-login">
-                        <div>
-                            <label for="email">E-mail</label>
-                            <input type="email" name="email">
-                        </div>
-                        <div>
-                            <label for="senha">Senha</label>
-                            <input type="password" name="senha">
-                        </div>
+                    <div class="user-data">
+                        <label for="data">Data de nascimento</label>
+                        <input type="date" name="data">
                     </div>
-                <button class="btn-login">Cadastrar</button>
-                <div class="voltar-login">
-                    <a href="login.html">Voltar para o login</a>
+                    <div class="user-data">
+                        <label for="cpf/cnpj">CPF/CNPJ</label>
+                        <input type="password" name="cpf/cnpj">
+                    </div>
                 </div>
+                <div class="data-login">
+                    <div class="user-data">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email">
+                    </div>
+                    <div class="user-data">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha">
+                    </div>
+                </div>
+
+            </form>
+    
+            <button class="btn-login">Cadastrar</button>
+
+            <a class="back-login" href="login.html">Voltar para o login</a>
         </div>
     </div>
+
+    <script src="https://kit.fontawesome.com/ea393de4c9.js" crossorigin="anonymous"></script>
 </body>
 </html>

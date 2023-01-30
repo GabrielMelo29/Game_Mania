@@ -29,7 +29,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 Game Mania é um e-commerce de aparelhos tecnológicos voltado especialmente para o público gamer.
 
-- [Visite o projeto online](https://gabrielmelo29.github.io/Habits)
+- [Visite o projeto online](https://gabrielmelo29.github.io/Game_Mania)
 
 ## 🔖 Layout
 
